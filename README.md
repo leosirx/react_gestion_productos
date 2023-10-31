@@ -163,15 +163,6 @@ function App() {
 export default App;
 ```
 
-
-
-User
-podes compartir el codigo de componente completo y explicar luego cada parte?
-ChatGPT
-markdown
-Copy code
-Aquí está el código completo para el componente `ProductList.js`:
-
 ```jsx
 import React, { useState, useEffect } from 'react';
 
