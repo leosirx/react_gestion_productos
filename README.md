@@ -163,15 +163,6 @@ function App() {
 export default App;
 ```
 
-
-
-User
-podes compartir el codigo de componente completo y explicar luego cada parte?
-ChatGPT
-markdown
-Copy code
-Aquí está el código completo para el componente `ProductList.js`:
-
 ```jsx
 import React, { useState, useEffect } from 'react';
 
@@ -212,34 +203,7 @@ function ProductList() {
 }
 
 export default
-
-
-
-User
-usa los estilos de react-boostrap
-ChatGPT
-markdown
-Copy code
-Para utilizar los estilos de React-Bootstrap en tu componente, primero necesitarás instalar `react-bootstrap` y `bootstrap` en tu proyecto, si aún no lo has hecho. Ejecuta los siguientes comandos en
-
-
-
-User
-pasame la resolucion pero con react-boostrap, 
-ChatGPT
-markdown
-Copy code
-Para utilizar los estilos de React-Bootstrap, asegúrate de haber instalado `react-bootstrap` y `bootstrap` en tu proyecto. Puedes instalarlo ejecutando:
-
-
-
-
-User
-ya esta preinstalado en elproyecto. compartime la resolucion con react-boostrap
-ChatGPT
-markdown
-Copy code
-Perfecto, aquí está la implementación del componente `ProductList.js` usando React-Bootstrap:
+```
 
 ```jsx
 import React, { useState, useEffect } from 'react';
