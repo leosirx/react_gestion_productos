@@ -5,28 +5,40 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BeatLoader } from "react-spinners";
 import ProductForm from "./ProductForm";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const { getAccessTokenSilently } = useAuth0();
 
-  const fetchProducts = () => axios
-    .get("https://backend-productos.netlify.app/api/productos")
-    .then((response) => {
+  const fetchProducts = async () => {
+    try {
+      const token = await getAccessTokenSilently();
+
+      console.log("ID Token:", token);
+      let response = axios.get(
+        "https://backend-productos.netlify.app/api/productos",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setProducts(response.data);
       setLoading(false);
-    })
-    .catch((error) => {
+    } catch (error) {
       toast.error("Hubo un error al cargar los productos");
       console.error(error);
       setLoading(false);
-    });
+    }
+  };
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
 
   const handleShowModal = () => {
     setSelectedProduct(null);
