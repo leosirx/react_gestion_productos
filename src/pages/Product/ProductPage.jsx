@@ -38,7 +38,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+  }, []);
 
   const handleShowModal = () => {
     setSelectedProduct(null);
