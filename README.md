@@ -27,7 +27,7 @@ Este repositorio contiene el esqueleto de una aplicación de React. Tu tarea ser
 
 5. **Desarrollar la UI para Gestionar las Categorias**: 
     - En esta etapa, se creará un componente que muestre una lista de categorias en una tabla o lista. Este componente consumirá datos de una API de Categorias:
-    https://backend-productos.netlify.app/api/categorías
+    https://backend-productos.netlify.app/api/categorias
     - Agregar un elemento en el menú (NavegationBar.jsx) para acceder al listado de categorias del punto anterior. Y agregar el route correspondiente. 
     - Agregar un formulario para crear o modificar categorías,  Campos de categoría: id, nombre.
     - Agrega un botón para eliminar una categoria.
